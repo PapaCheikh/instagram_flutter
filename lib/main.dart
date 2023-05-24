@@ -20,11 +20,12 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.camera_alt_outlined,
-                color: Colors.black,
-              )),
+            onPressed: () {},
+            icon: const Icon(
+              Icons.camera_alt_outlined,
+              color: Colors.black,
+            ),
+          ),
           title: Center(
             child: Image.asset(
               'assets/icons/Instagram-Logo.png',
@@ -33,34 +34,39 @@ class MyApp extends StatelessWidget {
           ),
           actions: [
             IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.send_outlined,
-                  color: Colors.black,
-                )),
+              onPressed: () {},
+              icon: const Icon(
+                Icons.send_outlined,
+                color: Colors.black,
+              ),
+            ),
           ],
         ),
         body: SingleChildScrollView(
-          child: Column(children: [StoryWidget(), PostWidget()]),
+          child: Column(
+            children: [
+              StoryWidget(),
+              PostWidget(),
+            ],
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.grey,
-            type: BottomNavigationBarType.fixed,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.search), label: 'search'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.camera_alt_outlined), label: 'Photo'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.favorite_border_outlined),
-                  label: 'Favorite'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person_2_outlined), label: 'Profil')
-            ]),
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.camera_alt_outlined), label: 'Photo'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite_border_outlined), label: 'Favorite'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person_2_outlined), label: 'Profil')
+          ],
+        ),
       ),
     );
   }
